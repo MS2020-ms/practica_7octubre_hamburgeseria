@@ -47,7 +47,7 @@ img{
     display: flex;
 }
 
-/* Inicio header */
+/* INICIO header */
 
 /* maquetando mobilefirst */
 /* navegador superior */
@@ -146,9 +146,9 @@ header nav ul li .activo{
     
 }
 
-/* fin header */
+/* FIN header */
 
-/* Inicio footer */
+/* INICIO footer */
 
 footer{
     background-color: var(--color-secundario);
@@ -175,9 +175,9 @@ footer a:hover{
     }
 }
 
-/* fin footer */
+/* FIN footer */
 
-/* Inicio hero */
+/* INICIO hero */
 
 .hero{
     background-image: url("../images/fondo.jpg");
@@ -235,9 +235,9 @@ footer a:hover{
     color: white;
 }
 
-/* Fin hero */
+/* FIN hero */
 
-/* Inicio main section ourservices */
+/* INICIO main section ourservices */
 
 main section{
     padding: 2.125em 0.825em;
@@ -329,9 +329,9 @@ main #ourservices article h3{
     }
 }
 
-/* Fin main section ourservices */
+/* FIN main section ourservices */
 
-/* inicio main section about us */
+/* INICIO main section about us */
 
 main #aboutus{
     padding-bottom: 100px;
@@ -379,4 +379,4 @@ main #aboutus .columna:hover .marco, main #aboutus .columna:hover .marco img{
     }
 }
 
-/* fin main section about us */
+/* FIN main section about us */
