@@ -1,0 +1,382 @@
+@import url(reset.css);
+
+/* CSS rules to specify families:
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+/* tipografia deseadas desde google fonts 
+https://fonts.google.com/ (search-select-embebed-import)*/
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/* iconos tipograficos desde fontawesome 5 cdn
+https://cdnjs.com/libraries/font-awesome (primer link) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+/* cajas crecen hacia dentro */
+*{
+    box-sizing: border-box;
+}
+/* declarar variables */
+:root{
+    --color-principal: #fa573a;
+    --color-secundario: #21242e;
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
+    --anchoMaximo: 1100px;
+    --gris: #aaa;
+
+}
+/* 1em le dejo al usuario libertad para aumentar tamano de pagina en su pc */
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+}
+/* siempre para responsive */
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* para crear ancho encorsetado */
+.container{
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+/* para elementos flotantes */
+.row{
+    display: flex;
+}
+
+/* Inicio header */
+
+/* maquetando mobilefirst */
+/* navegador superior */
+header .nav_top{
+    background-color: var(--color-secundario);
+    /* top-bottom | right-left */
+    padding: 20px 10px;
+}
+header .nav_top a{
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+}
+/* no se ve en formato movil */
+header .nav_top a span{
+    display: none;
+}
+header .nav_top a i{
+    color: var(--color-principal);
+}
+/* distribuir elementos dentro del mismo contenedor (caja), reparto equitativo espacio entre ellos*/
+header .nav_top .row{
+    justify-content: space-between;
+}
+
+/* navegador inferior */
+header nav{
+    padding: 20px 10px;
+}
+header .hamburguesa{
+    width: 50px;
+    cursor: pointer;
+}
+header .hamburguesa div{
+    border-top: 2px solid var(--gris);
+    margin: 10px;
+}
+/* logo y hamburgesa ocupando el 50% */
+header nav .row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ul ocupando al 100% */
+header nav ul{
+    width: 100%;
+}
+/* tamno de la imagen */
+header nav .logo{
+    max-width: 110px;
+}
+
+/* items */
+/* convierto todo el elemento (bloque) en boton */
+header nav ul li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    color: var(--gris);
+    border-bottom: 1px solid var(--gris);
+}
+header nav ul li a:hover{
+    color: var(--color-principal);
+}
+/* en pagina activa siempre texto de boton en rojo */
+header nav ul li .activo{
+    color: var(--color-principal);
+}
+
+/* media queries tablet 768px */
+/*  min-width define el mínimo tamaño que un elemento puede tener.
+    min-width: todos los estilos especificados serán aplicados a partir del min-width hacia adelante. */
+@media(min-width: 48em){
+    header .nav_top a span{
+        display: inline;
+        
+    }
+}
+/* tablet horizontal 1004px */
+@media(min-width: 62.750em){
+    header .hamburguesa{
+        display: none;
+    }
+    /* reparte ancho automatico */
+    header nav ul{
+        width: auto;
+    }
+    header nav ul li{
+        display: inline-block;
+    }
+    header nav ul li a{
+        padding: 5px 20px;
+        /* border-bottom: none; */
+        border-bottom: 0px;
+    }  
+    
+}
+
+/* fin header */
+
+/* Inicio footer */
+
+footer{
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    /* cambio en position y pierdo el ancho - volver a definir */
+    width: 100%;
+    margin-top: 20px;
+    bottom: 0px;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+}
+
+@media(min-width: 48em){
+    footer{
+        text-align: left;
+        
+    }
+}
+
+/* fin footer */
+
+/* Inicio hero */
+
+.hero{
+    background-image: url("../images/fondo.jpg");
+    background-color: #999;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 15% 10px;
+}
+.hero h1{
+    font-family: var(--fuenteSecundaria);
+    color: white;
+    font-size: 2.5em;
+}
+.hero h2{
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+.hero p{
+    color: white;
+    font-size: 1.10em;
+}
+
+.boton{
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal);
+}
+/* efecto del boton */
+.boton:hover{
+    background-color: transparent;
+    color: var(--color-principal);
+}
+/* transicion con ida y vuelta, enle boton y no el hover */
+.boton i{
+    transition: 1s;
+}
+/* animacion de la flecha en boton*/
+.boton:hover i{
+    transform: translateX(5px);
+}
+
+.hero ul li{
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero ul li a{
+    color: white;
+}
+
+/* Fin hero */
+
+/* Inicio main section ourservices */
+
+main section{
+    padding: 2.125em 0.825em;
+}
+main section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+main section h2 span{
+    color: var(--color-principal);
+}
+/* mover linea y la X */
+main section .underline{
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 2em;
+    text-align: center;
+}
+main section .underline hr{
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    border-color: var(--color-principal);
+    /* hr es un borde (linea=borde) */
+    /* al subirlo una capa y al no tener ancho ni alto = no se ve. necesito darle ancho */
+}
+
+/* doy un disposicion flexible particular a esta section
+flex wrap adapta al 100% del elemento
+29 px = 1.825em */
+main #ourservices .row{
+    flex-wrap: wrap;
+}
+main #ourservices article{
+    border-bottom: 1px solid var(--gris);
+    padding: 1.825em 0;
+}
+main #ourservices article div i{
+    color: var(--color-principal);
+    font-size: 2em;
+    border: 2px solid var(--color-principal);
+    padding: 0.8rem;
+    /* cuidado con los em que heredan del padre o de font-size del propio elemento, definir en rem */
+}
+
+main #ourservices article .fa-truck{
+    transform: rotateY(180deg);
+    /* giro el camion 180 respecto eje y */
+}
+
+main #ourservices article h3{
+    margin: 1em 0;
+    font-weight: 700;
+    /* tamano de la fuente importada */
+}
+.enlace{
+    text-decoration: none;
+    color: var(--color-principal);
+    margin: 1em 0 0 0;
+    display: block;
+     /* a es una linea, pasarlo a block */
+}
+
+/* media queries tablet 768px */
+@media(min-width: 48em){
+    main #ourservices article{
+        width: 50%;
+        border-bottom: 0px;
+        border-left: 1px solid var(--gris);
+        padding: 1.825em;
+        margin-bottom: 1em;
+        /* quito borde inferior - none o valor 0*/
+    }
+    main #ourservices article:last-child{
+        width: 100%;
+    }
+}
+
+/* tablet horizontal 1004px */
+@media(min-width: 62.750em){
+    main #ourservices article, main #ourservices article:last-child{
+        width: 33.333%;
+        /* sin box sizing (creace hacia dentro) hay que tener en cuenta los bordes px */
+    }
+}
+
+/* Fin main section ourservices */
+
+/* inicio main section about us */
+
+main #aboutus{
+    padding-bottom: 100px;
+}
+main #aboutus .row{
+    flex-wrap: wrap;
+}
+main #aboutus h3{
+    font-weight: 700; 
+}
+main #aboutus h4{
+    margin: 1em 0;
+    color: var(--color-principal);
+}
+main #aboutus .marco{
+    margin: 15px 0;
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    transition: 1s;
+    /* rotacion del marco
+    transicion en .marco para que tenga transicion al salir y entrar
+    90% para que no se monte con texto */
+}
+main #aboutus .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover .marco img{
+    transform: rotateZ(0deg);
+}
+
+
+/* media queries tablet 768px */
+@media(min-width: 48em){
+
+    main #aboutus .marco{
+        margin: 0 15px;
+    }
+    main #aboutus .columna:first-child{
+        width: 40%;
+    }
+    main #aboutus .columna:last-child{
+        width: 60%;
+    }
+}
+
+/* fin main section about us */

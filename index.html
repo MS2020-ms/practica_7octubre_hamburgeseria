@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueseria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- section: solo para contenidos relacionados -->
+    <!-- ir fontawesome icons, free icons - buscar iconos, copiar html, pegar 
+    https://fontawesome.com/icons?d=gallery&m=free (search-copy html)-->
+    <div class="wrapper">
+        <header>
+            <div class="nav_top">
+                <!-- container 100% ancho (diseno fluido) - row sistema flexible -->
+                <div class="container row">
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-envelope"></i>
+                            <span>rovers@gmail.com</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-phone"></i>
+                            <span>91 456 44 55</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Shopping cart</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <!-- container 100% ancho (diseno fluido) - row sistema flexible -->
+                <div class="container row">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.jpg" alt="logo de rovers hamburgueseria">
+                        </a>
+                    </div>
+                    <!-- lineas en formato movil (menu) -->
+                    <div class="hamburguesa">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <li><a class="activo" href="">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Item4</a></li>
+                        <li><a href="">Item5</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="hero">
+            <div class="container">
+                <!-- siempre un h1 y solo uno-->
+                <h1>Las mejores hambuerguesas del mundo</h1>
+                <h2>Bienvenido a nuestra hamburgueseria</h2>
+                <p>Come a partir de 15 €</p>
+                <div>
+                    <a href="" class="boton">
+                        Nuestra carta
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </div>
+                <ul>
+                    <!-- li*3>a>i -->
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+        <main>
+            <!-- section: tiene contenidos relacionados. Diseno encorsetado (comtainer), fondo blanco no necesito un nuevo div para color -->
+            <section id="ourservices" class="container">
+                <h2>Our <span>Services</span></h2>
+                <div class="underline">
+                    <!-- hr: linea tipo bisel con relieve (dos colores). hoshade: lo elimina -->
+                    <hr noshade="noshade" />
+                    <span>X</span>
+                </div>
+                <!-- row sistema flexible  -->
+                <div class="row">
+                    <article>
+                        <div>
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>1. titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis ipsum deserunt ab assumenda
+                            quidem id fugiat pariatur dicta iusto earum. Vel exercitationem illum officiis optio facere!
+                            Eaque ratione quia ducimus?</p>
+                        <!-- class enlace para usarlo posteriormente -->
+                        <a class="enlace" href="#">Leer mas<i class="fas fa-long-arrow-alt-right"></i></a>
+                    </article>
+                    <article>
+                        <div>
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>2. titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis ipsum deserunt ab assumenda
+                            quidem id fugiat pariatur dicta iusto earum. Vel exercitationem illum officiis optio facere!
+                            Eaque ratione quia ducimus?</p>
+
+                        <a class="enlace" href="#">Leer mas<i class="fas fa-long-arrow-alt-right"></i></a>
+                    </article>
+                    <article>
+                        <div>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>3. titulo del servicio</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis ipsum deserunt ab assumenda
+                            quidem id fugiat pariatur dicta iusto earum. Vel exercitationem illum officiis optio facere!
+                            Eaque ratione quia ducimus?</p>
+
+                        <a class="enlace" href="#">Leer mas<i class="fas fa-long-arrow-alt-right"></i></a>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section id="aboutus" class="container">
+                <!-- <div class="container"></div> si tuviera color fondo -->
+                <h2>About <span>Us</span></h2>
+                <div class="underline">
+                    <hr noshade="noshade" />
+                    <span>X</span>
+                </div>
+
+                <article class="row">
+
+                    <div class="columna">
+                        <div class="marco">
+                            <img src="images/about-main.jpg" alt="nuestro chef">
+                        </div>
+                    </div>
+
+                    <div class="columna">
+                        <h3>The History</h3>
+                        <h4>Our restaurant</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, eius tempora odit enim
+                            laudantium ullam repellendus tempore alias? Neque, iusto asperiores. Aliquid eius ipsam
+                            dolorum possimus laudantium ipsum odit atque.</p>
+                        <div>
+                            <a href="" class="boton">
+                                Leer mas
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2020 - <a href="">Aviso Legal</a> - <a href="#">Cookies</a></p>
+
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
