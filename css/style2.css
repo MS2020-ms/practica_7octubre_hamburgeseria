@@ -176,3 +176,54 @@ footer a:hover{
 }
 
 /* FIN footer */
+
+/* INICIO main section blogs */
+
+main section{
+    padding: 2.125em 0.825em;
+}
+main section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+main section h2 span{
+    color: var(--color-principal);
+}
+/* mover linea y la X */
+main section .underline{
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 2em;
+    text-align: center;
+}
+main section .underline hr{
+    position: absolute;
+    width: 100%;
+    top: -2px;
+    border-color: var(--color-principal);
+    /* hr es un borde (linea=borde) */
+    /* al subirlo una capa y al no tener ancho ni alto = no se ve. necesito darle ancho */
+}
+/* doy un disposicion flexible particular a esta section
+flex wrap adapta al 100% del elemento.
+29 px = 1.825em */
+main #blog .row{
+    flex-wrap: wrap;
+}
+main #blog article{
+    width: 50%;
+    padding: 1.25em 1.25em;
+}
+main #blog article h3{
+    font-size: 1.75em;
+    margin: 1em 0;
+    font-weight: 400;
+    /* tamano de la fuente importada */
+}
+
+/* FIN main section blogs */
