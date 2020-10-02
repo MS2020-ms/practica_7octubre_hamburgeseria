@@ -19,7 +19,6 @@ https://cdnjs.com/libraries/font-awesome (primer link) */
 /* declarar variables */
 :root{
     --color-principal: #fa573a;
-    --color-principal-opacity:  #fa573abb;
     --color-secundario: #21242e;
     --fuentePrincipal: 'Montserrat', sans-serif;
     --fuenteSecundaria: 'Handlee', cursive;
@@ -47,6 +46,9 @@ img{
 .row{
     display: flex;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* INICIO header */
 
@@ -54,8 +56,8 @@ img{
 /* navegador superior */
 header .nav_top{
     background-color: var(--color-secundario);
-    /* top-bottom | right-left */
     padding: 20px 10px;
+    /* top-bottom | right-left */
 }
 header .nav_top a{
     color: white;
@@ -95,7 +97,7 @@ header nav .row{
 header nav ul{
     width: 100%;
 }
-/* tamano de la imagen */
+/* tamno de la imagen */
 header nav .logo{
     max-width: 110px;
 }
@@ -178,13 +180,17 @@ footer a:hover{
 
 /* FIN footer */
 
-/* INICIO main section blogs */
+/* INICIO main section menu */
+
+main .wrapper{
+     background-color: var(--color-secundario);
+ }
 
 main section{
-    padding: 2.125em 0.825em;
+    padding: 4em 6.5em;
 }
 main section h2{
-    color: black;
+    color: white;
     font-family: var(--fuenteSecundaria);
     font-size: 2em;
     text-align: center;
@@ -192,7 +198,6 @@ main section h2{
 main section h2 span{
     color: var(--color-principal);
 }
-/* mover linea y la X */
 main section .underline{
     position: relative;
     width: 5em;
@@ -207,69 +212,114 @@ main section .underline hr{
     width: 100%;
     top: -2px;
     border-color: var(--color-principal);
-    /* hr es un borde (linea=borde) */
-    /* al subirlo una capa y al no tener ancho ni alto = no se ve. necesito darle ancho */
+    /* hr es un borde (linea=borde) al subirlo una capa y al no tener ancho ni alto = no se ve. necesito darle ancho */
 }
-/* doy un disposicion flexible particular a esta section
-flex wrap adapta al 100% del elemento.
-29 px = 1.825em */
-main #blog .row{
+/* doy un disposicion flexible particular a esta section flex wrap adapta al 100% del elemento */
+main #menu .row{
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-main #blog article{
-    width: 50%;
-    padding: 1.25em 1.25em;
+main aside{
+    margin-top: 3em;
+}
+/* ul ocupando al 100% */
+main nav ul{
+    width: 100%;
+}
+/* items */
+/* convierto todo el elemento (bloque) en boton */
+main nav ul li a{
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+main nav ul li .activo{
+    background-color: var(--color-principal);
+    border-radius: 8px;
+}
+main nav ul li a:hover{
+    background-color: var(--color-principal);
+    border-radius: 8px;
+}
+
+aside div h3{
+    color: white;
+    font-weight: 700;
+}
+main section .underline_dos{
     position: relative;
-    /* posicion relativa para hacer cambio de eje a (main #blog article .fecha) */
+    width: 3.5em;
+    margin-bottom: 1.5em;
+}
+main section .underline_dos hr{
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+    border-color: var(--color-principal);
+}
+aside div p{
+    color: white;
+    font-size: 0.95em;
+    line-height: 20px;
 
 }
-main #blog article h3{
-    font-size: 1.85em;
-    margin: 1em 0.20em;
-    font-weight: 400;
-    /* tamano de la fuente importada */
-}
-main #blog article h2{
-    color: var(--color-principal);
-    font-family: var(--fuentePrincipal);
-    font-size: 1.05em;
-    text-align: left;
-    font-weight: 700;
-    margin: 0 0.20em;
-}
-main #blog article p{
-    font-size: 1.05em;
-    margin: 1.25em 0.20em;
-    line-height: 30px;
-}
-main #blog article .fecha{
-    position: absolute;
-    background-color: var(--color-principal-opacity); 
+
+section article{
+    flex-direction: column;
     color: white;
-    font-size: 1.60em;
-    font-weight: 700;
-    text-align: center;
-    padding: 15px 18px;
-    top: -12px;
-    left: 15px;
+    padding: 2.00em 0 0 0.6em;
 }
+section article h3{
+    font-size: 1.05em;
+    margin-top: 20px;
+    font-weight: 700;
+}
+section article h3 span{
+    color: var(--color-principal);
+}
+section article p{
+    font-size: 0.85em;
+    line-height: 10px; 
+    margin: 20px 0;
+}
+
 .enlace{
     text-decoration: none;
     color: var(--color-principal);
-    font-size: 1.05em;
+    font-size: 0.90em;
     font-weight: 700;
-    margin: 0 0.20em;
     display: block;
      /* a es una linea, pasarlo a block */
 }
 
+section .boton{
+    color: var(--color-principal);
+    display: block;
+    position: absolute;
+    font-size: 2.50em;
+    right: 10px;
+}
+
 /* tablet horizontal 1004px */
 @media(min-width: 62.750em){
-    main #blog article{
-        width: 33.333%;
-        /* sin box sizing (creace hacia dentro) hay que tener en cuenta los bordes px */
+    main section{
+        flex-direction: row;
+        padding: 4em 6.5em;
+    }
+    
+    main section aside{
+        width: 40%;
+    }
+    main section>div{
+        width: 60%;
+    }
+
+    section .boton{
+        display: none;
     }
 }
 
-/* FIN main section blogs */
+/* FIN main section menu */
