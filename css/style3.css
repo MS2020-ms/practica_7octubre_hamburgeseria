@@ -309,28 +309,17 @@ section .boton{
         flex-direction: row;
         padding: 4em 6.5em;
     }
-    main #menu .row{
-        flex-wrap: nowrap;
-        margin-bottom: 30px;
-    }
-
+    
     main section aside{
         width: 40%;
     }
-    main section div:last-child{
+    main section>div{
         width: 60%;
     }
- 
-
-   
-
-
 
     section .boton{
         display: none;
     }
-    
-
 }
 
 /* FIN main section menu */
