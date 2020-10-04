@@ -183,7 +183,7 @@ footer a:hover{
 /* INICIO main section menu */
 
 main .wrapper{
-     background-color: var(--color-secundario);
+    background-color: var(--color-secundario);
  }
 
 main section{
@@ -199,7 +199,6 @@ main section h2 span{
     color: var(--color-principal);
 }
 main section .underline{
-    position: relative;
     width: 5em;
     margin: 0 auto;
     color: var(--color-principal);
@@ -208,23 +207,28 @@ main section .underline{
     text-align: center;
 }
 main section .underline hr{
-    position: absolute;
+    display:inline-block;
     width: 100%;
     top: -2px;
     border-color: var(--color-principal);
     /* hr es un borde (linea=borde) al subirlo una capa y al no tener ancho ni alto = no se ve. necesito darle ancho */
+}
+main section .underline span{
+    position: relative;
+    top: -20px;
 }
 /* doy un disposicion flexible particular a esta section flex wrap adapta al 100% del elemento */
 main #menu .row{
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-main aside{
-    margin-top: 3em;
+main section div:nth-child(2){
+    margin-top: 0.5em;
 }
 /* ul ocupando al 100% */
-main nav ul{
+main nav{
     width: 100%;
+    margin-bottom: 50px;
 }
 /* items */
 /* convierto todo el elemento (bloque) en boton */
@@ -245,7 +249,7 @@ main nav ul li a:hover{
     border-radius: 8px;
 }
 
-aside div h3{
+div:nth-child(2) div h3{
     color: white;
     font-weight: 700;
 }
@@ -257,10 +261,10 @@ main section .underline_dos{
 main section .underline_dos hr{
     position: absolute;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
     border-color: var(--color-principal);
 }
-aside div p{
+div:nth-child(2) div p{
     color: white;
     font-size: 0.95em;
     line-height: 20px;
@@ -270,7 +274,7 @@ aside div p{
 section article{
     flex-direction: column;
     color: white;
-    padding: 2.00em 0 0 0.6em;
+    padding: 2.00em 0 0.5em 0.6em;
 }
 section article h3{
     font-size: 1.05em;
@@ -305,21 +309,49 @@ section .boton{
 
 /* tablet horizontal 1004px */
 @media(min-width: 62.750em){
+    section .boton{
+        display: none;
+    }
     main section{
         flex-direction: row;
         padding: 4em 6.5em;
     }
-    
-    main section aside{
-        width: 40%;
-    }
-    main section>div{
-        width: 60%;
-    }
+   
 
-    section .boton{
-        display: none;
+
+
+  
+
+
+
+
+    .flexibe{
+        display: flex;
+        flex-flow: row nowrap;
+
     }
+    .lateral{
+        width:40%;
+    }
+    .nav{
+        margin:0.5em;
+        margin-bottom:3em;
+    } 
+    .section article{
+        display:inline-block;   
+    } 
+    .food{
+        display:flex;
+        flex-direction:row;
+        width:60%; 
+    }
+    .left{
+        width:60%;
+        margin-top:2.0em;   
+    }
+    .right{
+        margin-left:1em;
+    } 
 }
 
 /* FIN main section menu */
