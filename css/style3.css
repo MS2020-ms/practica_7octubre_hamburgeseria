@@ -222,9 +222,7 @@ main #menu .row{
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
-main section div:nth-child(2){
-    margin-top: 0.5em;
-}
+
 /* ul ocupando al 100% */
 main nav{
     width: 100%;
@@ -261,7 +259,7 @@ main section .underline_dos{
 main section .underline_dos hr{
     position: absolute;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 12px;
     border-color: var(--color-principal);
 }
 div:nth-child(2) div p{
@@ -274,11 +272,11 @@ div:nth-child(2) div p{
 section article{
     flex-direction: column;
     color: white;
-    padding: 2.00em 0 0.5em 0.6em;
+    padding: 2.00em 0 1em 2em;
 }
 section article h3{
     font-size: 1.05em;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: 700;
 }
 section article h3 span{
@@ -287,7 +285,7 @@ section article h3 span{
 section article p{
     font-size: 0.85em;
     line-height: 10px; 
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .enlace{
@@ -296,6 +294,7 @@ section article p{
     font-size: 0.90em;
     font-weight: 700;
     display: block;
+    margin-top: 20px;
      /* a es una linea, pasarlo a block */
 }
 
@@ -316,38 +315,36 @@ section .boton{
         flex-direction: row;
         padding: 4em 6.5em;
     }
-   
 
-
-
-  
-
-
-
-
-    .flexibe{
+    .flexible{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: wrap;
 
     }
     .lateral{
         width:40%;
+        padding-right: 100px;
+    }
+    .principal{
+        width: 60%;
     }
     .nav{
         margin:0.5em;
-        margin-bottom:3em;
+        margin-bottom:6em;
     } 
     .section article{
-        display:inline-block;   
+        display:inline-block; 
+      
     } 
     .food{
         display:flex;
         flex-direction:row;
-        width:60%; 
+        padding: 0 0;
+        margin-bottom: 30px;
     }
     .left{
-        width:60%;
-        margin-top:2.0em;   
+        width:45%;
+        margin-top:1.0em;   
     }
     .right{
         margin-left:1em;
